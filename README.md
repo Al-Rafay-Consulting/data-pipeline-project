@@ -88,6 +88,9 @@ The final output is stored in JSON format for easy integration with other system
     "February": 15000
   }
 }
+
+
+
  Project Structure
 data-pipeline/
 │
@@ -107,6 +110,9 @@ data-pipeline/
 ├── README.md                  # Project documentation
 ├── requirements.txt           # Python dependencies
 ├── venv/                      # Virtual environment (not pushed to GitHub)
+
+
+
  How to Run the Project
 1️⃣ Clone the repository
 git clone <your-repo-link>
@@ -120,6 +126,8 @@ source venv/bin/activate # Mac/Linux
 pip install -r requirements.txt
 5️⃣ Run the pipeline
 python main.py
+
+
  AI Tools Usage
 
 I used GitHub Copilot as an AI coding assistant to accelerate development, especially for:
