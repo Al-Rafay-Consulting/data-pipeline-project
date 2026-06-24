@@ -1,28 +1,25 @@
-#  Data Pipeline – Sales Data ETL Project
 
+# Data Pipeline – Sales Data ETL Project
 
-
-##  One-Line Summary
+## One-Line Summary
 
 **I built a modular data pipeline that ingests sales data from a CSV file, cleans and transforms it into structured business insights, and outputs results in JSON format for downstream applications like dashboards and APIs.**
 
-
-##  Project Overview
+## Project Overview
 
 This project implements a **modular ETL (Extract, Transform, Load) pipeline** to process raw sales data and convert it into meaningful business insights.
 
 The system is designed using clean architecture principles to ensure **scalability, maintainability, and reusability**.
 
-
-##  Architecture (ETL Pipeline Flow)
+## Architecture (ETL Pipeline Flow)
 
 The system follows a standard **ETL pipeline approach**:
 
-### 🔹 Extract
+### Extract
 - Load raw sales data from `sales.csv`
 - Read dataset into a structured DataFrame using Pandas
 
-### 🔹 Transform
+### Transform
 - Clean missing values and remove duplicates
 - Standardize column formats (dates, strings, etc.)
 - Generate business insights such as:
@@ -33,15 +30,13 @@ The system follows a standard **ETL pipeline approach**:
   - Region-wise performance
   - Profit analysis (if available)
 
- This step converts raw data into **decision-making information**.
+> This step converts raw data into **decision-making information**.
 
-### 🔹 Load
+### Load
 - Save processed insights into a structured JSON file (`result.json`)
 - Output can be used for APIs, dashboards, or reporting systems
 
----
-
-##  Data Cleaning Process
+## Data Cleaning Process
 
 The cleaning stage ensures data quality and consistency:
 
@@ -51,31 +46,27 @@ The cleaning stage ensures data quality and consistency:
 - Converting date fields into proper `datetime` format  
 - Ensuring consistent data types across columns  
 
----
-
-##  Transformation Logic
+## Transformation Logic
 
 The transformation layer is the **core intelligence** of the pipeline.
 
 It includes:
 
-- 📈 **Total Sales Calculation**
-- 📦 **Category-wise Sales Aggregation**
-- 📅 **Monthly Sales Trend Analysis**
-- 🏆 **Top 10 Products by Revenue**
-- 🌍 **Region-wise Performance Analysis**
-- 💰 **Profit Analysis (if available)**
+- **Total Sales Calculation**
+- **Category-wise Sales Aggregation**
+- **Monthly Sales Trend Analysis**
+- **Top 10 Products by Revenue**
+- **Region-wise Performance Analysis**
+- **Profit Analysis (if available)**
 
-👉 This step transforms raw transactional data into **actionable business insights**.
+This step transforms raw transactional data into **actionable business insights**.
 
----
-
-##  Output Format
+## Output Format
 
 The final output is stored in JSON format for easy integration with other systems.
 
 ### Example:
-```json id="json_example"
+```json
 {
   "total_sales": 123456,
   "category_sales": {
@@ -88,10 +79,11 @@ The final output is stored in JSON format for easy integration with other system
     "February": 15000
   }
 }
+```
 
+## Project Structure
 
-
- Project Structure
+```
 data-pipeline/
 │
 ├── data/
@@ -109,58 +101,78 @@ data-pipeline/
 ├── main.py                    # Pipeline orchestrator (entry point)
 ├── README.md                  # Project documentation
 ├── requirements.txt           # Python dependencies
-├── venv/                      # Virtual environment (not pushed to GitHub)
+└── venv/                      # Virtual environment (not pushed to GitHub)
+```
 
+## How to Run the Project
 
-
- How to Run the Project
-1️⃣ Clone the repository
+### 1. Clone the repository
+```bash
 git clone <your-repo-link>
 cd data-pipeline
-2️⃣ Create virtual environment
+```
+
+### 2. Create virtual environment
+```bash
 python -m venv venv
-3️⃣ Activate environment
+```
+
+### 3. Activate environment
+```bash
 venv\Scripts\activate   # Windows
 source venv/bin/activate # Mac/Linux
-4️⃣ Install dependencies
+```
+
+### 4. Install dependencies
+```bash
 pip install -r requirements.txt
-5️⃣ Run the pipeline
+```
+
+### 5. Run the pipeline
+```bash
 python main.py
+```
 
-
- AI Tools Usage
+## AI Tools Usage
 
 I used GitHub Copilot as an AI coding assistant to accelerate development, especially for:
 
-Pandas data manipulation
-GroupBy aggregations
-Boilerplate function generation
+- Pandas data manipulation
+- GroupBy aggregations
+- Boilerplate function generation
 
-However, all generated code was reviewed, modified, and tested to ensure correctness and full understanding.
+> However, all generated code was reviewed, modified, and tested to ensure correctness and full understanding.
 
-Software Engineering Practices
+## Software Engineering Practices
 
 This project follows professional software engineering principles:
 
-Modular design (separate files for each ETL stage)
-Separation of concerns
-Reusable functions and components
-Clean and readable code structure
-Scalable architecture for future expansion
-(Optional) Git version control for tracking changes
-🎯 Key Features
-End-to-end ETL pipeline
-Clean and modular Python architecture
-Business intelligence generation from raw data
-JSON output for APIs and dashboards
-Easily extendable for larger datasets
- Tech Stack
-Python 
-Pandas 
-JSON
-CSV Handling
- Future Improvements
-Add interactive dashboard (Streamlit / Power BI)
-Automate pipeline scheduling
-Add database integration (PostgreSQL / MySQL)
-Deploy as API using FastAPI
+- Modular design (separate files for each ETL stage)
+- Separation of concerns
+- Reusable functions and components
+- Clean and readable code structure
+- Scalable architecture for future expansion
+- (Optional) Git version control for tracking changes
+
+## Key Features
+
+- End-to-end ETL pipeline
+- Clean and modular Python architecture
+- Business intelligence generation from raw data
+- JSON output for APIs and dashboards
+- Easily extendable for larger datasets
+
+## Tech Stack
+
+- Python 
+- Pandas 
+- JSON
+- CSV Handling
+
+## Future Improvements
+
+- Add interactive dashboard (Streamlit / Power BI)
+- Automate pipeline scheduling
+- Add database integration (PostgreSQL / MySQL)
+- Deploy as API using FastAPI
+```
